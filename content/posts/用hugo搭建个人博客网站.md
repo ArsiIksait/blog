@@ -23,4 +23,8 @@ draft: false #false代表草稿模式，不会显示在网站里
 ![我放到了C:\Program Files\Hugo里面](/posts/pic/hugo_setup_step_1.png)
 ![添加环境变量Path](/posts/pic/hugo_setup_step_2.png)
 
-现在我们已经安装好了Hugo啦！之后按`WIN+R`键，输入`cmd`后回车，打开CMD，在里面输入命令`hugo version`，如果没有错误，则会显示当前安装的hugo的版本。`(hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)`
+现在我们已经安装好了Hugo啦！之后按`WIN+R`键，输入`cmd`后回车，打开CMD，在里面输入命令`hugo version`，如果没有错误，则会显示当前安装的hugo的版本。
+
+```
+hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio
+```
