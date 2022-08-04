@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='powershell美化 效果  最终效果 
+终端 WindowsTerminal &amp;amp; PowerShell 首先下载 Windows Terminal 和 PowerShell最新版本
+windows terminal美化 编辑profiles-&amp;gt;defaults节点
+&amp;#34;backgroundImage&amp;#34;: &amp;#34;test.png&amp;#34;, //背景图片路径 &amp;#34;backgroundImageOpacity&amp;#34;: 0.15, //背景透明度 &amp;#34;font&amp;#34;: { &amp;#34;face&amp;#34;: &amp;#34;Cascadia Code PL&amp;#34;, //字体  &amp;#34;size&amp;#34;: 12 } pwsh配置 输入$PROFILE查看pwsh的配置文件路径
+编辑$PROFILE 添加以下代码启用历史记录和智能提示高亮
+Set-PSReadLineOption -PredictionSource History Set-PSReadLineOption -ShowToolTips pwsh快捷键 Ctrl&#43;空格 显示候选命令  效果 
+scoop 和winget差不多的包管理工具
+#到pwsh里输入以下代码安装scoop Set-ExecutionPolicy RemoteSigned -scope CurrentUser Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 编辑$PROFILE 添加以下代码每次自动启动Starship
+Invoke-Expression (&amp;amp;starship init powershell)
+Starship 安装: scoop install starship'><title>PowerShell美化</title>
+
+<link rel='canonical' href='https://blog.arsiiksait.vercel.app/posts/pwshbeautification/'>
+
+<link rel="stylesheet" href="/scss/style.min.4df26095a027ead9be46f67fb83b44e98b34c87d5e891c2bdfb3bfce96b9d54e.css"><meta property='og:title' content='PowerShell美化'>
+<meta property='og:description' content='powershell美化 效果  最终效果 
+终端 WindowsTerminal &amp;amp; PowerShell 首先下载 Windows Terminal 和 PowerShell最新版本
+windows terminal美化 编辑profiles-&amp;gt;defaults节点
+&amp;#34;backgroundImage&amp;#34;: &amp;#34;test.png&amp;#34;, //背景图片路径 &amp;#34;backgroundImageOpacity&amp;#34;: 0.15, //背景透明度 &amp;#34;font&amp;#34;: { &amp;#34;face&amp;#34;: &amp;#34;Cascadia Code PL&amp;#34;, //字体  &amp;#34;size&amp;#34;: 12 } pwsh配置 输入$PROFILE查看pwsh的配置文件路径
+编辑$PROFILE 添加以下代码启用历史记录和智能提示高亮
+Set-PSReadLineOption -PredictionSource History Set-PSReadLineOption -ShowToolTips pwsh快捷键 Ctrl&#43;空格 显示候选命令  效果 
+scoop 和winget差不多的包管理工具
+#到pwsh里输入以下代码安装scoop Set-ExecutionPolicy RemoteSigned -scope CurrentUser Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 编辑$PROFILE 添加以下代码每次自动启动Starship
+Invoke-Expression (&amp;amp;starship init powershell)
+Starship 安装: scoop install starship'>
+<meta property='og:url' content='https://blog.arsiiksait.vercel.app/posts/pwshbeautification/'>
+<meta property='og:site_name' content='ArsiIksait&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='powershell' /><meta property='article:tag' content='美化' /><meta property='article:tag' content='教程' /><meta property='article:published_time' content='2022-03-14T21:18:38&#43;08:00'/><meta property='article:modified_time' content='2022-03-14T21:18:38&#43;08:00'/><meta property='og:image' content='http://drive.233.pink/Picture/1000chan_collection_006_1920x1200.jpg' />
+<meta name="twitter:title" content="PowerShell美化">
+<meta name="twitter:description" content="powershell美化 效果  最终效果 
+终端 WindowsTerminal &amp;amp; PowerShell 首先下载 Windows Terminal 和 PowerShell最新版本
+windows terminal美化 编辑profiles-&amp;gt;defaults节点
+&amp;#34;backgroundImage&amp;#34;: &amp;#34;test.png&amp;#34;, //背景图片路径 &amp;#34;backgroundImageOpacity&amp;#34;: 0.15, //背景透明度 &amp;#34;font&amp;#34;: { &amp;#34;face&amp;#34;: &amp;#34;Cascadia Code PL&amp;#34;, //字体  &amp;#34;size&amp;#34;: 12 } pwsh配置 输入$PROFILE查看pwsh的配置文件路径
+编辑$PROFILE 添加以下代码启用历史记录和智能提示高亮
+Set-PSReadLineOption -PredictionSource History Set-PSReadLineOption -ShowToolTips pwsh快捷键 Ctrl&#43;空格 显示候选命令  效果 
+scoop 和winget差不多的包管理工具
+#到pwsh里输入以下代码安装scoop Set-ExecutionPolicy RemoteSigned -scope CurrentUser Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 编辑$PROFILE 添加以下代码每次自动启动Starship
+Invoke-Expression (&amp;amp;starship init powershell)
+Starship 安装: scoop install starship"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://drive.233.pink/Picture/1000chan_collection_006_1920x1200.jpg' />
+    <link rel="shortcut icon" href="img/avatar.png" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/pwshbeautification/">
+                
+                    <img src="http://drive.233.pink/Picture/1000chan_collection_006_1920x1200.jpg" loading="lazy" alt="Featured image of post PowerShell美化" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/posts/pwshbeautification/">PowerShell美化</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 14, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="powershell美化">powershell美化</h1>
+<h2 id="效果">效果</h2>
+<p><figure 
+	>
+	<a href="/posts/pic/WindowsTerminal_yHb2JTB5ix.png" >
+		<img src="/posts/pic/WindowsTerminal_yHb2JTB5ix.png"
+			
+			
+			
+			loading="lazy"
+			alt="最终效果">
+	</a>
+	
+	<figcaption>最终效果</figcaption>
+	
+</figure></p>
+<h2 id="终端">终端</h2>
+<h3 id="windowsterminal--powershell">WindowsTerminal &amp; PowerShell</h3>
+<p>首先下载 Windows Terminal 和 <a class="link" href="https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows"  target="_blank" rel="noopener"
+    >PowerShell</a>最新版本</p>
+<h4 id="windows-terminal美化">windows terminal美化</h4>
+<p>编辑profiles-&gt;defaults节点</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;backgroundImage&#34;</span><span class="err">:</span> <span class="s2">&#34;test.png&#34;</span><span class="err">,</span> <span class="c1">//背景图片路径
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s2">&#34;backgroundImageOpacity&#34;</span><span class="err">:</span> <span class="mf">0.15</span><span class="err">,</span> <span class="c1">//背景透明度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s2">&#34;font&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;face&#34;</span><span class="p">:</span> <span class="s2">&#34;Cascadia Code PL&#34;</span><span class="p">,</span> <span class="c1">//字体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;size&#34;</span><span class="p">:</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="pwsh配置">pwsh配置</h4>
+<p>输入<code>$PROFILE</code>查看pwsh的配置文件路径<br>
+编辑<code>$PROFILE</code> 添加以下代码启用历史记录和智能提示高亮</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Powershell" data-lang="Powershell"><span class="line"><span class="cl"><span class="nb">Set-PSReadLineOption</span> <span class="n">-PredictionSource</span> <span class="nb">History
+</span></span></span><span class="line"><span class="cl"><span class="nb">Set-PSReadLineOption</span> <span class="n">-ShowToolTips</span>
+</span></span></code></pre></div><h4 id="pwsh快捷键">pwsh快捷键</h4>
+<p><code>Ctrl+空格</code> 显示候选命令
+<figure 
+	>
+	<a href="/posts/pic/WindowsTerminal_epoxvJdX7d.png" >
+		<img src="/posts/pic/WindowsTerminal_epoxvJdX7d.png"
+			
+			
+			
+			loading="lazy"
+			alt="效果">
+	</a>
+	
+	<figcaption>效果</figcaption>
+	
+</figure></p>
+<h3 id="scoop">scoop</h3>
+<p>和winget差不多的包管理工具</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="c">#到pwsh里输入以下代码安装scoop</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-scope</span> <span class="n">CurrentUser</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Invoke-Expression</span> <span class="p">(</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://get.scoop.sh&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>编辑<code>$PROFILE</code> 添加以下代码每次自动启动Starship</p>
+<p><code>Invoke-Expression (&amp;starship init powershell)</code></p>
+<h3 id="starship">Starship</h3>
+<p>安装: <code>scoop install starship</code><br>
+自定义命令提示符<br>
+输入<code>Starship config</code>打开配置文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c">#starship配置</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span> <span class="s2">&#34;&#34;&#34;$username$hostname$directory$git_branch$time$status
+</span></span></span><span class="line"><span class="cl"><span class="s2">$character&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">command_timeout</span> <span class="p">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="nx">add_newline</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">username</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">style_user</span> <span class="p">=</span> <span class="s2">&#34;blue bold&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">style_root</span> <span class="p">=</span> <span class="s2">&#34;red bold&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span> <span class="s2">&#34;[$user]($style) &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">show_always</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">hostname</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span>  <span class="s2">&#34;@ [$hostname](bold green) &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">ssh_only</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">directory</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">truncation_length</span> <span class="p">=</span> <span class="mi">1024</span>
+</span></span><span class="line"><span class="cl"><span class="nx">truncate_to_repo</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;yellow bold&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span> <span class="s2">&#34;in [$path]($style) &#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">git_branch</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;cyan&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">symbol</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span> <span class="s2">&#34;on git:[$symbol$branch]($style) &#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">status</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span> <span class="s2">&#34;$symbol[$status]($style) &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;red&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">symbol</span> <span class="p">=</span> <span class="s2">&#34;C:&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">time</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disabled</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format</span> <span class="p">=</span> <span class="s1">&#39;[\[$time\]]($style) &#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">time_format</span> <span class="p">=</span> <span class="s2">&#34;%T&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">utc_time_offset</span> <span class="p">=</span> <span class="s2">&#34;+8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;white&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">character</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">success_symbol</span> <span class="p">=</span> <span class="s2">&#34;[&gt;](bold green)&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">error_symbol</span> <span class="p">=</span> <span class="s2">&#34;[&gt;](bold red)&#34;</span>
+</span></span></code></pre></div><p><figure 
+	>
+	<a href="/posts/pic/WindowsTerminal_eRMTPOMGij.png" >
+		<img src="/posts/pic/WindowsTerminal_eRMTPOMGij.png"
+			
+			
+			
+			loading="lazy"
+			alt="效果">
+	</a>
+	
+	<figcaption>效果</figcaption>
+	
+</figure></p>
+<h2 id="一些工具">一些工具</h2>
+<h3 id="gsudo">gsudo</h3>
+<p>安装: <code>scoop install gsudo</code><br>
+和linux的sudo一样可以申请管理员权限<br>
+再也不用担心申请管理员权限要重新打开终端啦</p>
+<h3 id="busybox">busybox</h3>
+<p>安装: <code>scoop install busybox</code><br>
+一个集成了一百多个最常用linux命令和工具<br>
+比如可以在cmd里使用ls等命令</p>
+<h3 id="vim">vim</h3>
+<p>安装: <code>scoop install vim</code><br>
+可以在powershell或者cmd里使用vim<br>
+&ldquo;启动速度快&rdquo;</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/powershell/">powershell</a>
+        
+            <a href="/tags/%E7%BE%8E%E5%8C%96/">美化</a>
+        
+            <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <div id="gitalk-container"></div>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "94a0dea91511e64672ac",
+        clientSecret: "adf9366a491fbf8d1c66546c164d99abf39f8a60",
+        repo: "blog",
+        owner: "ArsiIksait",
+        admin: ["ArsiIksait"],
+        distractionFreeMode: false, 
+        id: md5(location.pathname), 
+    });
+    (function () {
+        if (
+            ["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1
+        ) {
+            document.getElementById("gitalk-container").innerHTML =
+                "Gitalk comments not available by default when the website is previewed locally.";
+            return;
+        }
+        gitalk.render("gitalk-container");
+    })();
+</script>
+
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 ArsiIksait&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.7.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#效果">效果</a></li>
+    <li><a href="#终端">终端</a>
+      <ol>
+        <li><a href="#windowsterminal--powershell">WindowsTerminal &amp; PowerShell</a>
+          <ol>
+            <li><a href="#windows-terminal美化">windows terminal美化</a></li>
+            <li><a href="#pwsh配置">pwsh配置</a></li>
+            <li><a href="#pwsh快捷键">pwsh快捷键</a></li>
+          </ol>
+        </li>
+        <li><a href="#scoop">scoop</a></li>
+        <li><a href="#starship">Starship</a></li>
+      </ol>
+    </li>
+    <li><a href="#一些工具">一些工具</a>
+      <ol>
+        <li><a href="#gsudo">gsudo</a></li>
+        <li><a href="#busybox">busybox</a></li>
+        <li><a href="#vim">vim</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="/js/snow.js"></script>
+
+
+    </body>
+</html>

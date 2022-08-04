@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='用Hugo搭建个人博客网站 效果  最终效果 
+下载&amp;amp;安装Hugo 下载Hugo 首先我们需要下载Hugo, 去这里下载最新版的Hugo: [Hugo Github Relase]
+安装Hugo 我下载的版本是：hugo_extended_0.95.0_Windows-64bit.zip，解压后会有一个hugo.exe和两个证书，把hugo.exe找个位置放起来，然后给他加在Path变量里面。  我放到了C:\Program Files\Hugo里面   添加环境变量Path 
+现在我们已经安装好了Hugo啦！之后按WIN&#43;R键，输入cmd后回车，打开CMD，在里面输入命令hugo version，如果没有错误，则会显示当前安装的hugo的版本。(hugo v0.95.0-9F2E76AF&#43;extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)'><title>用hugo搭建个人博客网站</title>
+
+<link rel='canonical' href='https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/'>
+
+<link rel="stylesheet" href="/scss/style.min.4df26095a027ead9be46f67fb83b44e98b34c87d5e891c2bdfb3bfce96b9d54e.css"><meta property='og:title' content='用hugo搭建个人博客网站'>
+<meta property='og:description' content='用Hugo搭建个人博客网站 效果  最终效果 
+下载&amp;amp;安装Hugo 下载Hugo 首先我们需要下载Hugo, 去这里下载最新版的Hugo: [Hugo Github Relase]
+安装Hugo 我下载的版本是：hugo_extended_0.95.0_Windows-64bit.zip，解压后会有一个hugo.exe和两个证书，把hugo.exe找个位置放起来，然后给他加在Path变量里面。  我放到了C:\Program Files\Hugo里面   添加环境变量Path 
+现在我们已经安装好了Hugo啦！之后按WIN&#43;R键，输入cmd后回车，打开CMD，在里面输入命令hugo version，如果没有错误，则会显示当前安装的hugo的版本。(hugo v0.95.0-9F2E76AF&#43;extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)'>
+<meta property='og:url' content='https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/'>
+<meta property='og:site_name' content='ArsiIksait&#39;s blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='博客' /><meta property='article:tag' content='教程' /><meta property='article:published_time' content='2022-03-19T20:28:00&#43;08:00'/><meta property='article:modified_time' content='2022-03-19T20:28:00&#43;08:00'/><meta property='og:image' content='http://drive.233.pink/Picture/29835339_p0.jpg' />
+<meta name="twitter:title" content="用hugo搭建个人博客网站">
+<meta name="twitter:description" content="用Hugo搭建个人博客网站 效果  最终效果 
+下载&amp;amp;安装Hugo 下载Hugo 首先我们需要下载Hugo, 去这里下载最新版的Hugo: [Hugo Github Relase]
+安装Hugo 我下载的版本是：hugo_extended_0.95.0_Windows-64bit.zip，解压后会有一个hugo.exe和两个证书，把hugo.exe找个位置放起来，然后给他加在Path变量里面。  我放到了C:\Program Files\Hugo里面   添加环境变量Path 
+现在我们已经安装好了Hugo啦！之后按WIN&#43;R键，输入cmd后回车，打开CMD，在里面输入命令hugo version，如果没有错误，则会显示当前安装的hugo的版本。(hugo v0.95.0-9F2E76AF&#43;extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://drive.233.pink/Picture/29835339_p0.jpg' />
+    <link rel="shortcut icon" href="img/avatar.png" />
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">
+                
+                    <img src="http://drive.233.pink/Picture/29835339_p0.jpg" loading="lazy" alt="Featured image of post 用hugo搭建个人博客网站" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+
+    <h2 class="article-title">
+        <a href="/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">用hugo搭建个人博客网站</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 19, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="用hugo搭建个人博客网站">用Hugo搭建个人博客网站</h1>
+<h2 id="效果">效果</h2>
+<p><figure 
+	>
+	<a href="/posts/pic/hugo_build_own_blog_website.png" >
+		<img src="/posts/pic/hugo_build_own_blog_website.png"
+			
+			
+			
+			loading="lazy"
+			alt="最终效果">
+	</a>
+	
+	<figcaption>最终效果</figcaption>
+	
+</figure></p>
+<h2 id="下载安装hugo">下载&amp;安装Hugo</h2>
+<h3 id="下载hugo">下载Hugo</h3>
+<p>首先我们需要下载Hugo, 去这里下载最新版的Hugo:  <a class="link" href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >[Hugo Github Relase]</a></p>
+<h3 id="安装hugo">安装Hugo</h3>
+<p>我下载的版本是：<code>hugo_extended_0.95.0_Windows-64bit.zip</code>，解压后会有一个<code>hugo.exe</code>和两个证书，把<code>hugo.exe</code>找个位置放起来，然后给他加在<code>Path变量</code>里面。
+<figure 
+	>
+	<a href="/posts/pic/hugo_setup_step_1.png" >
+		<img src="/posts/pic/hugo_setup_step_1.png"
+			
+			
+			
+			loading="lazy"
+			alt="我放到了C:\Program Files\Hugo里面">
+	</a>
+	
+	<figcaption>我放到了C:\Program Files\Hugo里面</figcaption>
+	
+</figure>
+<figure 
+	>
+	<a href="/posts/pic/hugo_setup_step_2.png" >
+		<img src="/posts/pic/hugo_setup_step_2.png"
+			
+			
+			
+			loading="lazy"
+			alt="添加环境变量Path">
+	</a>
+	
+	<figcaption>添加环境变量Path</figcaption>
+	
+</figure></p>
+<p>现在我们已经安装好了Hugo啦！之后按<code>WIN+R</code>键，输入<code>cmd</code>后回车，打开CMD，在里面输入命令<code>hugo version</code>，如果没有错误，则会显示当前安装的hugo的版本。<code>(hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)</code></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">hugo</a>
+        
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+        
+            <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+    
+        
+    <div id="gitalk-container"></div>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "94a0dea91511e64672ac",
+        clientSecret: "adf9366a491fbf8d1c66546c164d99abf39f8a60",
+        repo: "blog",
+        owner: "ArsiIksait",
+        admin: ["ArsiIksait"],
+        distractionFreeMode: false, 
+        id: md5(location.pathname), 
+    });
+    (function () {
+        if (
+            ["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1
+        ) {
+            document.getElementById("gitalk-container").innerHTML =
+                "Gitalk comments not available by default when the website is previewed locally.";
+            return;
+        }
+        gitalk.render("gitalk-container");
+    })();
+</script>
+
+
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 ArsiIksait&#39;s blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.7.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#效果">效果</a></li>
+    <li><a href="#下载安装hugo">下载&amp;安装Hugo</a>
+      <ol>
+        <li><a href="#下载hugo">下载Hugo</a></li>
+        <li><a href="#安装hugo">安装Hugo</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="/js/snow.js"></script>
+
+
+    </body>
+</html>
