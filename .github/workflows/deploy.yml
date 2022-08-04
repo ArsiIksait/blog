@@ -10,23 +10,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+            # fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '${{ steps.hugo-version.outputs.HUGO_VERSION }}'
-          # extended: true
+          extended: true
       - name: Build
         run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
           commit_message: ${{ github.event.head_commit.message }}
           publish_branch: main
-          force_orphan: true
+          # force_orphan: true
