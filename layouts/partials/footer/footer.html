@@ -1,0 +1,41 @@
+{{$scratch := newScratch}}
+{{ range (where .Site.Pages "Kind" "page" )}} 
+    {{$scratch.Add "total" .WordCount}}
+{{ end }}
+
+<br>
+<br>
+
+    <section class="copyright">
+        <a>&copy; 
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
+            {{ .Site.Params.footer.since }} - 
+        {{ end }}
+        {{ now.Format "2006" }}  ArsiIksait猫猫酱的博客</a>
+    </section>
+<br>
+<span id="span"></span>
+<script type="text/javascript">
+    function runtime(){
+        // 初始时间，年/月/日 时:分:秒
+        X = new Date("2022/08/04 00:00:00");
+        Y = new Date();
+        T = (Y.getTime()-X.getTime());
+        M = 24*60*60*1000;
+        a = T/M;
+        A = Math.floor(a);
+        b = (a-A)*24;
+        B = Math.floor(b);
+        c = (b-B)*60;
+        C = Math.floor((b-B)*60);
+        D = Math.floor((c-C)*60);
+        //信息写入到DIV中
+        span.innerHTML = "<a>本站已经在线运行: "+A+"天"+B+"小时"+C+"分"+D+"秒</a>"
+    }
+    setInterval(runtime, 1000);
+</script>
+<br>
+<br>
+      <a>{{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共喵喵了{{$var}}k字·共{{ len (where .Site.RegularPages "Section" "posts") }}篇文章</br><span></a>
+</br>
+</br>
