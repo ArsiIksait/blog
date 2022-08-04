@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on ArsiIksait&#39;s blog</title>
+    <link>https://blog.arsiiksait.vercel.app/tags/hugo/</link>
+    <description>Recent content in hugo on ArsiIksait&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Mar 2022 20:28:00 +0800</lastBuildDate><atom:link href="https://blog.arsiiksait.vercel.app/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用hugo搭建个人博客网站</title>
+      <link>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</guid>
+      <description>用Hugo搭建个人博客网站 效果  最终效果 
+下载&amp;amp;安装Hugo 下载Hugo 首先我们需要下载Hugo, 去这里下载最新版的Hugo: [Hugo Github Relase]
+安装Hugo 我下载的版本是：hugo_extended_0.95.0_Windows-64bit.zip，解压后会有一个hugo.exe和两个证书，把hugo.exe找个位置放起来，然后给他加在Path变量里面。  我放到了C:\Program Files\Hugo里面   添加环境变量Path 
+现在我们已经安装好了Hugo啦！之后按WIN+R键，输入cmd后回车，打开CMD，在里面输入命令hugo version，如果没有错误，则会显示当前安装的hugo的版本。(hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)</description>
+    </item>
+    
+  </channel>
+</rss>

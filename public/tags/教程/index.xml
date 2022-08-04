@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 on ArsiIksait&#39;s blog</title>
+    <link>https://blog.arsiiksait.vercel.app/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on ArsiIksait&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Mar 2022 20:28:00 +0800</lastBuildDate><atom:link href="https://blog.arsiiksait.vercel.app/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用hugo搭建个人博客网站</title>
+      <link>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</guid>
+      <description>用Hugo搭建个人博客网站 效果  最终效果 
+下载&amp;amp;安装Hugo 下载Hugo 首先我们需要下载Hugo, 去这里下载最新版的Hugo: [Hugo Github Relase]
+安装Hugo 我下载的版本是：hugo_extended_0.95.0_Windows-64bit.zip，解压后会有一个hugo.exe和两个证书，把hugo.exe找个位置放起来，然后给他加在Path变量里面。  我放到了C:\Program Files\Hugo里面   添加环境变量Path 
+现在我们已经安装好了Hugo啦！之后按WIN+R键，输入cmd后回车，打开CMD，在里面输入命令hugo version，如果没有错误，则会显示当前安装的hugo的版本。(hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)</description>
+    </item>
+    
+    <item>
+      <title>PowerShell美化</title>
+      <link>https://blog.arsiiksait.vercel.app/posts/pwshbeautification/</link>
+      <pubDate>Mon, 14 Mar 2022 21:18:38 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/posts/pwshbeautification/</guid>
+      <description>powershell美化 效果  最终效果 
+终端 WindowsTerminal &amp;amp; PowerShell 首先下载 Windows Terminal 和 PowerShell最新版本
+windows terminal美化 编辑profiles-&amp;gt;defaults节点
+&amp;#34;backgroundImage&amp;#34;: &amp;#34;test.png&amp;#34;, //背景图片路径 &amp;#34;backgroundImageOpacity&amp;#34;: 0.15, //背景透明度 &amp;#34;font&amp;#34;: { &amp;#34;face&amp;#34;: &amp;#34;Cascadia Code PL&amp;#34;, //字体  &amp;#34;size&amp;#34;: 12 } pwsh配置 输入$PROFILE查看pwsh的配置文件路径
+编辑$PROFILE 添加以下代码启用历史记录和智能提示高亮
+Set-PSReadLineOption -PredictionSource History Set-PSReadLineOption -ShowToolTips pwsh快捷键 Ctrl+空格 显示候选命令  效果 
+scoop 和winget差不多的包管理工具
+#到pwsh里输入以下代码安装scoop Set-ExecutionPolicy RemoteSigned -scope CurrentUser Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 编辑$PROFILE 添加以下代码每次自动启动Starship
+Invoke-Expression (&amp;amp;starship init powershell)
+Starship 安装: scoop install starship</description>
+    </item>
+    
+  </channel>
+</rss>

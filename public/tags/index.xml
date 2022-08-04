@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on ArsiIksait&#39;s blog</title>
+    <link>https://blog.arsiiksait.vercel.app/tags/</link>
+    <description>Recent content in Tags on ArsiIksait&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Mar 2022 20:28:00 +0800</lastBuildDate><atom:link href="https://blog.arsiiksait.vercel.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>https://blog.arsiiksait.vercel.app/tags/hugo/</link>
+      <pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客</title>
+      <link>https://blog.arsiiksait.vercel.app/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>教程</title>
+      <link>https://blog.arsiiksait.vercel.app/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://blog.arsiiksait.vercel.app/tags/powershell/</link>
+      <pubDate>Mon, 14 Mar 2022 21:18:38 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>美化</title>
+      <link>https://blog.arsiiksait.vercel.app/tags/%E7%BE%8E%E5%8C%96/</link>
+      <pubDate>Mon, 14 Mar 2022 21:18:38 +0800</pubDate>
+      
+      <guid>https://blog.arsiiksait.vercel.app/tags/%E7%BE%8E%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
