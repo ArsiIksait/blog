@@ -1,13 +1,210 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ArsiIksait's blog</title><link>https://blog.arsiiksait.vercel.app/</link><description>Recent content on ArsiIksait's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Mar 2022 20:28:00 +0800</lastBuildDate><atom:link href="https://blog.arsiiksait.vercel.app/index.xml" rel="self" type="application/rss+xml"/><item><title>用hugo搭建个人博客网站</title><link>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</link><pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate><guid>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</guid><description>用Hugo搭建个人博客网站 效果 下载&amp;amp;安装Hugo 下载Hugo 首先我们需要下载Hugo, 去这里下载最新版的Hugo: [Hugo Github Relase]
-安装Hugo 我下载的版本是：hugo_extended_0.95.0_Windows-64bit.zip，解压后会有一个hugo.exe和两个证书，把hugo.exe找个位置放起来，然后给他加在Path变量里面。 现在我们已经安装好了Hugo啦！之后按WIN+R键，输入cmd后回车，打开CMD，在里面输入命令hugo version，如果没有错误，则会显示当前安装的hugo的版本。
-hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio</description></item><item><title>PowerShell美化</title><link>https://blog.arsiiksait.vercel.app/posts/pwshbeautification/</link><pubDate>Mon, 14 Mar 2022 21:18:38 +0800</pubDate><guid>https://blog.arsiiksait.vercel.app/posts/pwshbeautification/</guid><description>powershell美化 效果 终端 WindowsTerminal &amp;amp; PowerShell 首先下载 Windows Terminal 和 PowerShell最新版本
-windows terminal美化 编辑profiles-&amp;gt;defaults节点
-&amp;#34;backgroundImage&amp;#34;: &amp;#34;test.png&amp;#34;, //背景图片路径 &amp;#34;backgroundImageOpacity&amp;#34;: 0.15, //背景透明度 &amp;#34;font&amp;#34;: { &amp;#34;face&amp;#34;: &amp;#34;Cascadia Code PL&amp;#34;, //字体 &amp;#34;size&amp;#34;: 12 } pwsh配置 输入$PROFILE查看pwsh的配置文件路径
-编辑$PROFILE 添加以下代码启用历史记录和智能提示高亮
-Set-PSReadLineOption -PredictionSource History Set-PSReadLineOption -ShowToolTips pwsh快捷键 Ctrl+空格 显示候选命令 scoop 和winget差不多的包管理工具
-#到pwsh里输入以下代码安装scoop Set-ExecutionPolicy RemoteSigned -scope CurrentUser Invoke-Expression (New-Object System.Net.WebClient).DownloadString(&amp;#39;https://get.scoop.sh&amp;#39;) 编辑$PROFILE 添加以下代码每次自动启动Starship
-Invoke-Expression (&amp;amp;starship init powershell)
-Starship 安装: scoop install starship
-自定义命令提示符
-输入Starship config打开配置文件
-#starship配置 format = &amp;#34;&amp;#34;&amp;#34;$username$hostname$directory$git_branch$time$status $character&amp;#34;&amp;#34;&amp;#34; command_timeout = 100 add_newline = true [username] style_user = &amp;#34;blue bold&amp;#34; style_root = &amp;#34;red bold&amp;#34; format = &amp;#34;[$user]($style) &amp;#34; disabled = false show_always = true [hostname] format = &amp;#34;@ [$hostname](bold green) &amp;#34; disabled = false ssh_only = false [directory] truncation_length = 1024 truncate_to_repo = false style = &amp;#34;yellow bold&amp;#34; format = &amp;#34;in [$path]($style) &amp;#34; [git_branch] style = &amp;#34;cyan&amp;#34; symbol = &amp;#34;&amp;#34; format = &amp;#34;on git:[$symbol$branch]($style) &amp;#34; [status] format = &amp;#34;$symbol[$status]($style) &amp;#34; disabled = false style = &amp;#34;red&amp;#34; symbol = &amp;#34;C:&amp;#34; [time] disabled = false format = &amp;#39;[\[$time\]]($style) &amp;#39; time_format = &amp;#34;%T&amp;#34; utc_time_offset = &amp;#34;+8&amp;#34; style = &amp;#34;white&amp;#34; [character] success_symbol = &amp;#34;[&amp;gt;](bold green)&amp;#34; error_symbol = &amp;#34;[&amp;gt;](bold red)&amp;#34; 一些工具 gsudo 安装: scoop install gsudo</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ArsiIksait&#39;s blog</title>
+        <link>https://blog.arsiiksait.vercel.app/</link>
+        <description>Recent content on ArsiIksait&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <lastBuildDate>Sat, 19 Mar 2022 20:28:00 +0800</lastBuildDate><atom:link href="https://blog.arsiiksait.vercel.app/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>用hugo搭建个人博客网站</title>
+        <link>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</link>
+        <pubDate>Sat, 19 Mar 2022 20:28:00 +0800</pubDate>
+        
+        <guid>https://blog.arsiiksait.vercel.app/posts/%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</guid>
+        <description>&lt;img src="http://drive.233.pink/Picture/29835339_p0.jpg" alt="Featured image of post 用hugo搭建个人博客网站" /&gt;&lt;h1 id=&#34;用hugo搭建个人博客网站&#34;&gt;用Hugo搭建个人博客网站&lt;/h1&gt;
+&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.arsiiksait.vercel.app/posts/pic/hugo_build_own_blog_website.png&#34; &gt;
+		&lt;img src=&#34;https://blog.arsiiksait.vercel.app/posts/pic/hugo_build_own_blog_website.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;最终效果&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;最终效果&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载安装hugo&#34;&gt;下载&amp;amp;安装Hugo&lt;/h2&gt;
+&lt;h3 id=&#34;下载hugo&#34;&gt;下载Hugo&lt;/h3&gt;
+&lt;p&gt;首先我们需要下载Hugo, 去这里下载最新版的Hugo:  &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;[Hugo Github Relase]&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h3&gt;
+&lt;p&gt;我下载的版本是：&lt;code&gt;hugo_extended_0.95.0_Windows-64bit.zip&lt;/code&gt;，解压后会有一个&lt;code&gt;hugo.exe&lt;/code&gt;和两个证书，把&lt;code&gt;hugo.exe&lt;/code&gt;找个位置放起来，然后给他加在&lt;code&gt;Path变量&lt;/code&gt;里面。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.arsiiksait.vercel.app/posts/pic/hugo_setup_step_1.png&#34; &gt;
+		&lt;img src=&#34;https://blog.arsiiksait.vercel.app/posts/pic/hugo_setup_step_1.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;我放到了C:\Program Files\Hugo里面&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;我放到了C:\Program Files\Hugo里面&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.arsiiksait.vercel.app/posts/pic/hugo_setup_step_2.png&#34; &gt;
+		&lt;img src=&#34;https://blog.arsiiksait.vercel.app/posts/pic/hugo_setup_step_2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;添加环境变量Path&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;添加环境变量Path&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;现在我们已经安装好了Hugo啦！之后按&lt;code&gt;WIN+R&lt;/code&gt;键，输入&lt;code&gt;cmd&lt;/code&gt;后回车，打开CMD，在里面输入命令&lt;code&gt;hugo version&lt;/code&gt;，如果没有错误，则会显示当前安装的hugo的版本。&lt;code&gt;(hugo v0.95.0-9F2E76AF+extended windows/amd64 BuildDate=2022-03-16T14:20:19Z VendorInfo=gohugoio)&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>PowerShell美化</title>
+        <link>https://blog.arsiiksait.vercel.app/posts/pwshbeautification/</link>
+        <pubDate>Mon, 14 Mar 2022 21:18:38 +0800</pubDate>
+        
+        <guid>https://blog.arsiiksait.vercel.app/posts/pwshbeautification/</guid>
+        <description>&lt;img src="http://drive.233.pink/Picture/1000chan_collection_006_1920x1200.jpg" alt="Featured image of post PowerShell美化" /&gt;&lt;h1 id=&#34;powershell美化&#34;&gt;powershell美化&lt;/h1&gt;
+&lt;h2 id=&#34;效果&#34;&gt;效果&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.arsiiksait.vercel.app/posts/pic/WindowsTerminal_yHb2JTB5ix.png&#34; &gt;
+		&lt;img src=&#34;https://blog.arsiiksait.vercel.app/posts/pic/WindowsTerminal_yHb2JTB5ix.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;最终效果&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;最终效果&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;终端&#34;&gt;终端&lt;/h2&gt;
+&lt;h3 id=&#34;windowsterminal--powershell&#34;&gt;WindowsTerminal &amp;amp; PowerShell&lt;/h3&gt;
+&lt;p&gt;首先下载 Windows Terminal 和 &lt;a class=&#34;link&#34; href=&#34;https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PowerShell&lt;/a&gt;最新版本&lt;/p&gt;
+&lt;h4 id=&#34;windows-terminal美化&#34;&gt;windows terminal美化&lt;/h4&gt;
+&lt;p&gt;编辑profiles-&amp;gt;defaults节点&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;backgroundImage&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;test.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//背景图片路径
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;backgroundImageOpacity&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.15&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//背景透明度
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;font&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;face&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Cascadia Code PL&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//字体
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;#34;size&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pwsh配置&#34;&gt;pwsh配置&lt;/h4&gt;
+&lt;p&gt;输入&lt;code&gt;$PROFILE&lt;/code&gt;查看pwsh的配置文件路径&lt;br&gt;
+编辑&lt;code&gt;$PROFILE&lt;/code&gt; 添加以下代码启用历史记录和智能提示高亮&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Powershell&#34; data-lang=&#34;Powershell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Set-PSReadLineOption&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-PredictionSource&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;History
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Set-PSReadLineOption&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-ShowToolTips&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;pwsh快捷键&#34;&gt;pwsh快捷键&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Ctrl+空格&lt;/code&gt; 显示候选命令
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.arsiiksait.vercel.app/posts/pic/WindowsTerminal_epoxvJdX7d.png&#34; &gt;
+		&lt;img src=&#34;https://blog.arsiiksait.vercel.app/posts/pic/WindowsTerminal_epoxvJdX7d.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;效果&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;效果&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;scoop&#34;&gt;scoop&lt;/h3&gt;
+&lt;p&gt;和winget差不多的包管理工具&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;#到pwsh里输入以下代码安装scoop&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Set-ExecutionPolicy&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RemoteSigned&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;-scope&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CurrentUser&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;Invoke-Expression&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;New-Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Net&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebClient&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DownloadString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://get.scoop.sh&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;编辑&lt;code&gt;$PROFILE&lt;/code&gt; 添加以下代码每次自动启动Starship&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Invoke-Expression (&amp;amp;starship init powershell)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;starship&#34;&gt;Starship&lt;/h3&gt;
+&lt;p&gt;安装: &lt;code&gt;scoop install starship&lt;/code&gt;&lt;br&gt;
+自定义命令提示符&lt;br&gt;
+输入&lt;code&gt;Starship config&lt;/code&gt;打开配置文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;#starship配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;$username$hostname$directory$git_branch$time$status
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;$character&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;command_timeout&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;add_newline&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;style_user&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;blue bold&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;style_root&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;red bold&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[$user]($style) &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;disabled&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;show_always&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;s2&#34;&gt;&amp;#34;@ [$hostname](bold green) &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;disabled&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;ssh_only&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;directory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;truncation_length&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;truncate_to_repo&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;yellow bold&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;in [$path]($style) &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;git_branch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cyan&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;symbol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;on git:[$symbol$branch]($style) &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;$symbol[$status]($style) &amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;disabled&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;symbol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;C:&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;disabled&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;[\[$time\]]($style) &amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;time_format&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;%T&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;utc_time_offset&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;+8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;white&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;character&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;success_symbol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[&amp;gt;](bold green)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;error_symbol&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[&amp;gt;](bold red)&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://blog.arsiiksait.vercel.app/posts/pic/WindowsTerminal_eRMTPOMGij.png&#34; &gt;
+		&lt;img src=&#34;https://blog.arsiiksait.vercel.app/posts/pic/WindowsTerminal_eRMTPOMGij.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;效果&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;效果&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;一些工具&#34;&gt;一些工具&lt;/h2&gt;
+&lt;h3 id=&#34;gsudo&#34;&gt;gsudo&lt;/h3&gt;
+&lt;p&gt;安装: &lt;code&gt;scoop install gsudo&lt;/code&gt;&lt;br&gt;
+和linux的sudo一样可以申请管理员权限&lt;br&gt;
+再也不用担心申请管理员权限要重新打开终端啦&lt;/p&gt;
+&lt;h3 id=&#34;busybox&#34;&gt;busybox&lt;/h3&gt;
+&lt;p&gt;安装: &lt;code&gt;scoop install busybox&lt;/code&gt;&lt;br&gt;
+一个集成了一百多个最常用linux命令和工具&lt;br&gt;
+比如可以在cmd里使用ls等命令&lt;/p&gt;
+&lt;h3 id=&#34;vim&#34;&gt;vim&lt;/h3&gt;
+&lt;p&gt;安装: &lt;code&gt;scoop install vim&lt;/code&gt;&lt;br&gt;
+可以在powershell或者cmd里使用vim&lt;br&gt;
+&amp;ldquo;启动速度快&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
