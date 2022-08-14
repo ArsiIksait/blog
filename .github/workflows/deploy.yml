@@ -22,7 +22,10 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-
+          
+      - name: Build
+        run: hugo --minify
+      
       - name: Build
         run: hugo --minify
 
